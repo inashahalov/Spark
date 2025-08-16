@@ -111,17 +111,17 @@ query.awaitTermination()
 
 ##  Запуск последовательности:
 
-1. **Запустите Docker контейнеры:**
+1. **Запустить Docker контейнеры:**
    ```bash
    docker compose up -d
    ```
 
-2. **Запустите Python Producer:**
+2. **Запустить Python Producer:**
    ```bash
    python producer.py
    ```
 
-3. **Запустите Spark Streaming приложение:**
+3. **Запустить Spark Streaming приложение:**
    ```bash
    spark-submit spark_streaming.py
    ```
@@ -130,7 +130,8 @@ query.awaitTermination()
 
 ##  Расширение задачи
 
-Можно обрабатывать  числа, сложные объекты (чеки, события кликов, метрики датчиков и т.д.). Вот несколько вариантов усложнения:
+Обрабатывать  числа, сложные объекты (чеки, события кликов, метрики датчиков и т.д.). 
+Вот несколько вариантов усложнения:
 
 ---
 
@@ -173,7 +174,7 @@ windowed_df = batch_df.withWatermark("timestamp", "10 seconds").groupBy(
 ```
 ---
 
-## ✨ Заключение
+##  Заключение
 
 pipeline:
 
