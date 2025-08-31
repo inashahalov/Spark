@@ -190,22 +190,8 @@ query.awaitTermination()
 3. Использовать оконную функцию (`window(...)`) для анализа по временным промежуткам.
 4. Группировать данные и делать агрегации (sum, count и т.д.).
 
----
 
-##  Улучшения в Spark Streaming
 
-Добавление оконной агрегации:
-
-```python
-from pyspark.sql.functions import window
-
-# После получения flat_df
-windowed_df = batch_df.withWatermark("timestamp", "10 seconds").groupBy(
-    window(col("timestamp"), "10 seconds"),
-    col("store_name")
-).agg(spark_sum("item_total").alias("revenue"))
-```
----
 
 ##  Заключение
 
